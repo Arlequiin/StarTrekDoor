@@ -1,16 +1,18 @@
 from turtle import *
-length=100
-rotation=5
+length=200
+from math import pi
+rotation=pi*(10/3)
 speed(1000)
-for i in range(20):
+for i in range(60):
+    
     for j in range(4):
         forward(length)
         left(90)
     length-=rotation
-    left(3*(1-(rotation/100)))#3
+    left(pi)#3*(1-(rotation/100))
     penup()
     forward(rotation)
     pendown()
     print(rotation)
-    rotation*=1-(i/100)
+    rotation*=(1-(5/100))#(1-(pi/100))
 mainloop()
